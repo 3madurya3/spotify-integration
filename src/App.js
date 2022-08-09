@@ -41,8 +41,8 @@ function App() {
                 Authorization: `Bearer ${token}`
             },
             params: {
-                limit: 10, 
-                time_range: "short_term"
+                limit: 50, 
+                time_range: "long_term"
             }
         })
         console.log(data);
@@ -70,8 +70,11 @@ function App() {
                 <div className="artistname">
                 {artist.name}
                 </div>
-                {artist.popularity}                
-                {artist.images.length ? <img width={"30%"} src={artist.images[0].url} alt=""/> : <div>No Image</div>}
+
+                <div className='popularity'>
+                    <h2>UNDERGROUND SCORE:  {100 - artist.popularity + 10}%</h2>  
+                </div>              
+                {artist.images.length ? <img width={"25%"} src={artist.images[0].url} alt=""/> : <div>No Image</div>}
             </div>
         ))
     }
@@ -79,16 +82,16 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <h1>monk<span class='smaller'>media</span>
+                <h1>monk<span class='smaller'>:underground</span>
                 </h1>
                     {!token ?
                     <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPE}`}>Login to Spotify</a>
-                    : <button className='logout' onClick={logout}> Logout </button>} 
+                    : <button className='logout' onClick={logout}> LOGOUT </button>} 
 
                     {token ?
                         <form onSubmit={getTopTracks}>
                             <input type="text" onChange={e => setSearchKey(e.target.value)}/>
-                            <button type={"submit"}>tap in, b*tch</button>
+                            <button type={"submit"}>TAP IN</button>
                         </form>
 
                         : <h2>Please login ^</h2>
