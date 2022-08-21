@@ -66,15 +66,12 @@ function App() {
 
     const renderArtists = () => {
         return artists.map(artist => (
-            <div className='selection' key={artist.id}>
+            <div class='topArtists' key={artist.id}>
                 <div className="artistname">
                 {artist.name}
+                <h2 className='popularity'>UNDERGROUND SCORE:  {100 - artist.popularity }%</h2>  
+                {artist.images.length ? <img width={"25%"} src={artist.images[0].url} alt=""/> : <div>No Image</div>} 
                 </div>
-
-                <div className='popularity'>
-                    <h2>UNDERGROUND SCORE:  {100 - artist.popularity + 10}%</h2>  
-                </div>              
-                {artist.images.length ? <img width={"25%"} src={artist.images[0].url} alt=""/> : <div>No Image</div>}
             </div>
         ))
     }
