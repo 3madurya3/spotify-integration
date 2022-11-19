@@ -2,12 +2,13 @@ import React from "react";
   
 const Home = () => {
   return (
-    <div>
-      <h1>
-        sleepy
-      </h1>
-    </div>
+    <header className="App-header">
+    <h1>
+        monk<span className='smaller'>:underground</span>
+    </h1>
+</header>
   );
 };
+
   
 export default Home;

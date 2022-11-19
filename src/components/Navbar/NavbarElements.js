@@ -12,16 +12,19 @@ export const Nav = styled.nav`
 `;
   
 export const NavLink = styled(Link)`
-  color: #808080;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  padding: 0 1rem;
-  height: 100%;
-  cursor: pointer;
-  &.active {
-    color: #4d4dff;
-  }
+background-color: transparent; /* Grey */
+border: none;
+color: white;
+padding: 8px 12px;
+text-decoration: none;
+display: inline-block;
+font-size: 12px;
+border-radius: 8px;
+font-family: 'futura';
+font-weight: bold;
+transition-duration: 0.1s;
+margin: 10px;
+position: relative;
 `;
   
 export const Bars = styled(FaBars)`

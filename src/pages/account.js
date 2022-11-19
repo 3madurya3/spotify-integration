@@ -1,18 +1,17 @@
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import '../App.css';
-import image from '../tapped_in_fasho.jpg';
-import image2 from '../not_tapped_in.jpg';
-import image3 from '../bro.jpg';
-import exportAsImage from "../exportAsImage";
-
+// import image from '../tapped_in_fasho.jpg';
+// import image2 from '../not_tapped_in.jpg';
+// import image3 from '../bro.jpg';
+// import exportAsImage from "../exportAsImage";
 
 
 function Account() {
 
     const exportRef = useRef();
     const CLIENT_ID = "d0db6dd1a5ef4b7f8a493a84259ae21c"
-    const REDIRECT_URI = "http://localhost:3001"
+    const REDIRECT_URI = "http://localhost:3000/account"
     const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize"
     const RESPONSE_TYPE = "token"
     const SCOPE = "user-top-read"
@@ -127,12 +126,12 @@ function Account() {
 
     const renderObscure = () => {
         if (obscure.length != 0){
-            let imagePath = './bro.jpg';
+            let imagePath = '../bro.jpg';
             if (obscure.popularity <= 50){
-                imagePath = './tapped_in_fasho.jpg';
+                imagePath = '../tapped_in_fasho.jpg';
             }
             else if (obscure.popularity <= 75){
-                imagePath = './not_tapped_in.jpg';
+                imagePath = '../not_tapped_in.jpg';
                 
             }
 
@@ -154,7 +153,7 @@ function Account() {
                                         
                         </div>
                         <div className = "smalltext">
-                            <p>Music data, artist images, and album covers are provided by Spotify.</p><p> monk:underground is not affiliated, associated, authorized, endorsed by,or in any way officially connected with Spotify. Spotify is a trademark of Spotify AB.</p>  
+                            <p> Music data, artist images, and album covers are provided by Spotify.</p><p> monk:underground is not affiliated, associated, authorized, endorsed by,or in any way officially connected with Spotify. Spotify is a trademark of Spotify AB.</p>  
                         </div>   
                     </div>
             )
@@ -179,13 +178,13 @@ function Account() {
                         </div>
                         }
             </header>  
-
             <body>       
                             {renderObscure()}           
             </body>    
 
         </div>
     );
+
 }
 
 export default Account;  
