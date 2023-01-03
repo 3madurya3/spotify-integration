@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c9c86d11.css",
-    "main.js": "/static/js/main.392bd6aa.js",
+    "main.css": "/static/css/main.067d2ffe.css",
+    "main.js": "/static/js/main.8066c8e5.js",
     "static/media/gradient.jpg": "/static/media/gradient.dacba3e0cfa2ce27c40a.jpg",
     "static/media/bro2.png": "/static/media/bro2.1048659065e5919b94ec.png",
     "static/media/13 Pro - 124.png": "/static/media/13 Pro - 124.2f6b40d98a0dfec51212.png",
@@ -19,11 +19,11 @@
     "static/media/orange_cursor.svg": "/static/media/orange_cursor.5a7aadf1adbcf7cc8d2f.svg",
     "index.html": "/index.html",
     "static/media/cursor.svg": "/static/media/cursor.de3d5ca5f6decfb543e1.svg",
-    "main.c9c86d11.css.map": "/static/css/main.c9c86d11.css.map",
-    "main.392bd6aa.js.map": "/static/js/main.392bd6aa.js.map"
+    "main.067d2ffe.css.map": "/static/css/main.067d2ffe.css.map",
+    "main.8066c8e5.js.map": "/static/js/main.8066c8e5.js.map"
   },
   "entrypoints": [
-    "static/css/main.c9c86d11.css",
-    "static/js/main.392bd6aa.js"
+    "static/css/main.067d2ffe.css",
+    "static/js/main.8066c8e5.js"
   ]
 }
