@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a5b0fbef.css",
-    "main.js": "/static/js/main.566b8331.js",
+    "main.css": "/static/css/main.dc1a0b65.css",
+    "main.js": "/static/js/main.822e7134.js",
     "static/media/gradient.jpg": "/static/media/gradient.dacba3e0cfa2ce27c40a.jpg",
     "static/media/bro2.png": "/static/media/bro2.9e7d4d8490d1e6dbca39.png",
     "static/media/tapped_in_fasho2.png": "/static/media/tapped_in_fasho2.a26c1e978046a9bc668e.png",
@@ -13,16 +13,14 @@
     "static/media/tapped_in_fasho.jpg": "/static/media/tapped_in_fasho.44283ba35ccae86cbeed.jpg",
     "static/media/SilversPersonalUseRegular-ZV22x.ttf": "/static/media/SilversPersonalUseRegular-ZV22x.d7d501b9435988a1c86d.ttf",
     "static/media/gradient2.jpg": "/static/media/gradient2.8d5d19785f43752c451a.jpg",
-    "static/media/Example1.png": "/static/media/Example1.6c955370e6239e681dc3.png",
-    "static/media/Example2.png": "/static/media/Example2.6c955370e6239e681dc3.png",
     "static/media/orange_cursor.svg": "/static/media/orange_cursor.5a7aadf1adbcf7cc8d2f.svg",
     "index.html": "/index.html",
     "static/media/cursor.svg": "/static/media/cursor.de3d5ca5f6decfb543e1.svg",
-    "main.a5b0fbef.css.map": "/static/css/main.a5b0fbef.css.map",
-    "main.566b8331.js.map": "/static/js/main.566b8331.js.map"
+    "main.dc1a0b65.css.map": "/static/css/main.dc1a0b65.css.map",
+    "main.822e7134.js.map": "/static/js/main.822e7134.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5b0fbef.css",
-    "static/js/main.566b8331.js"
+    "static/css/main.dc1a0b65.css",
+    "static/js/main.822e7134.js"
   ]
 }
