@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6f9a06a7.css",
-    "main.js": "/static/js/main.f032f265.js",
+    "main.js": "/static/js/main.e1f47e6c.js",
     "static/media/tapped_in_fasho.png": "/static/media/tapped_in_fasho.04227bd7e83327cc6fcf.png",
     "static/media/kinda_tapped_in.png": "/static/media/kinda_tapped_in.271c955e43836077ddc6.png",
     "static/media/not_tapped_in.png": "/static/media/not_tapped_in.695764e8a7812e425f45.png",
@@ -9,10 +9,10 @@
     "static/media/SilversPersonalUseRegular-ZV22x.ttf": "/static/media/SilversPersonalUseRegular-ZV22x.d7d501b9435988a1c86d.ttf",
     "index.html": "/index.html",
     "main.6f9a06a7.css.map": "/static/css/main.6f9a06a7.css.map",
-    "main.f032f265.js.map": "/static/js/main.f032f265.js.map"
+    "main.e1f47e6c.js.map": "/static/js/main.e1f47e6c.js.map"
   },
   "entrypoints": [
     "static/css/main.6f9a06a7.css",
-    "static/js/main.f032f265.js"
+    "static/js/main.e1f47e6c.js"
   ]
 }
