@@ -1,11 +1,11 @@
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import './App.css';
-import image from './tapped_in_fasho.jpg';
-import image2 from './not_tapped_in.jpg';
-import image3 from './bro.jpg';
+import image from './tapped_in_fasho.png';
+import image2 from './not_tapped_in.png';
+import image3 from './bro.png';
 import exportAsImage from "./exportAsImage";
-import gradient from './gradient.jpg'
+import SpotifyPlaylist from './SpotifyPlaylist'
 
 
 
@@ -19,7 +19,7 @@ function App() {
     const show_dialog = "true"
     const SCOPE = "user-top-read"
 
-    const [ token, setToken ] = useState("");
+    const [token, setToken ] = useState("");
     const [artists, setArtists] = useState([]);
     const [obscure, setObscure] = useState([]);
     const [lowID, setLowID] = useState("");
@@ -66,7 +66,7 @@ function App() {
                         },
                         params: {
                             limit: 30, 
-                            time_range: "short_term"
+                            time_range: "medium_term"
                         }
                     })
                     //console.log(data);
@@ -152,12 +152,12 @@ function App() {
 
     const renderObscure = () => {
         if (obscure.length != 0){ //need to put this elsewhere
-            let imagePath = './bro2.png';
+            let imagePath = './bro.png';
             if (obscure.popularity <= 50){
-                imagePath = './tapped_in_fasho2.png';
+                imagePath = './tapped_in_fasho.png';
             }
             else if (obscure.popularity <= 75){
-                imagePath = './not_tapped_in2.png';
+                imagePath = './not_tapped_in.png';
                 
             }
 
@@ -193,7 +193,7 @@ function App() {
                             
                         </div>   
                         }
-                         <p class="spotify-trademark">Music data, artist images, and album covers are provided by Spotify.</p> <p class="spotify-trademark"> monk:underground is not affiliated, associated, authorized, endorsed by,or in any way officially connected with Spotify. Spotify is a trademark of Spotify AB.</p>  
+                         <p class="spotify-trademark">Music data, artist images, and album covers are provided by Spotify.</p> <p class="spotify-trademark"> monk:underground is not affiliated, associated, authorized, endorsed by,or in any way officially connected with Spotify. Spotify is a trademark of Spotify AB.</p> <p class="spotify-trademark">&copy; 2023 monk media</p>
                     </div>
             )
         }
@@ -215,22 +215,30 @@ function App() {
                             <button className='logout' onClick={logout}> LOGOUT </button>
                             <button className='save' onClick={() => exportAsImage(exportRef.current, "My Top Underground Artist")}>SAVE</button>
                             <p className='home-small'>T. Monk gave you an underground score of {120 - obscure.popularity + "%"}</p> 
-                            <p className='home-small_2'>Click save and share your top artist with the world (and tag them)</p>
+                            <p className='home-small_2'>Click save and share your top artist with the world (remember to tag them!)</p>
+
                         </div>
                         }
             </header>  
 
-            <body>       
-                            {token ?
-                            renderObscure()
-                            :
-                            <div className='homepage'> 
-                            {/* <img className='gradient' src = {gradient}/> */}
-                                <h3> WANNA KNOW YOUR TOP UNDERGROUND ARTIST?</h3>
-                              <p className='home-small'> We define "underground" as artists who are up and coming or outside of the mainstream. Your top underground artist is found by taking your top 30 artists in the last 6 months and ranking them based on popularity.</p><p className='home-small'> This website is made possible with the use of the Spotify Web API.</p>
-                            </div>
-                            }           
-            </body>    
+            <body>
+  {token ? (
+    renderObscure()
+  ) : (
+    <div className="homepage">
+      <h3>WANNA KNOW YOUR TOP UNDERGROUND ARTIST?</h3>
+      <p className="home-small">
+        We define "underground" as artists who are up and coming or outside of
+        the mainstream. Your top underground artist is found by taking your top
+        30 artists in the last 6 months and ranking them based on popularity.
+      </p>
+      <p className="home-small_3">
+        This website is made possible with the use of the Spotify Web API.
+      </p>
+      <SpotifyPlaylist />
+    </div>
+  )}
+</body>    
 
         </div>
     );

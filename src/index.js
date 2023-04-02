@@ -9,7 +9,9 @@ root.render(
   <React.StrictMode>
 <body>
     <App />
-
+    {/* <footer>
+      &copy; 2023 monk media
+    </footer> */}
 </body>
   </React.StrictMode>
 );
